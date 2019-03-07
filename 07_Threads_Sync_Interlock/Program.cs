@@ -45,7 +45,7 @@ namespace _07_Threads_Sync_Interlock
             for (int i = 0; i < 10000000; i++)
             {
                 //Count++;   unsafe for Threads
-                Interlocked.Increment(ref Count); // safe for Threads
+                Interlocked. .Increment(ref Count); // safe for Threads
                 //Count++;
             }
         }

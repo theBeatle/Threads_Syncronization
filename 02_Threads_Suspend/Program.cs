@@ -14,13 +14,16 @@ namespace _02_Threads_Suspend
 
             ThreadStart ts = new ThreadStart(HardWork);
             Thread t = new Thread(ts);
+            t.IsBackground = true;
             t.Start(); // thread start
             Console.WriteLine("Press any key to stop");
             Console.ReadKey();
             t.Suspend(); //thread pause
-            Console.WriteLine("Thread stoped!");
-            Console.WriteLine("Press any key to resume");
-            Console.ReadKey();
+                         //Console.WriteLine("Thread stoped!");
+                         //Console.WriteLine("Press any key to resume");
+                         //Console.ReadKey();
+            Thread.Sleep(5800);
+
             t.Resume(); // thread resume
         }
 

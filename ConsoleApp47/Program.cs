@@ -17,11 +17,11 @@ namespace ConsoleApp47
             T.Start();
             //Thread.Sleep(2000);
             Console.WriteLine("Waiting for thread ending");
-            T.Join(1000);
+            T.Join(5000);
             if (T.IsAlive) Console.WriteLine("1 sec T is still working");
             T.Join(3000);
             if (T.IsAlive) Console.WriteLine("2 sec T is still working");
-            T.Join(5000);
+            T.Join(1000);
             if (T.IsAlive) Console.WriteLine("5 sec T is still working");
 
             T.Join();
@@ -34,7 +34,7 @@ namespace ConsoleApp47
         static void HardWork()
         {
             Console.WriteLine("Child Thread is working");
-            Thread.Sleep(10000);
+            Thread.Sleep(6000);
             Console.WriteLine("Child Thread ended");
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -29,10 +30,10 @@ namespace _05_Threads_Sync_Lock
             t2.Start();
             t3.Start();
 
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine(i);
-            }
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    Console.WriteLine(i);
+            //}
 
             t1.Join();
             t2.Join();
@@ -48,7 +49,7 @@ namespace _05_Threads_Sync_Lock
         static readonly object _lock = new object();
         static void CounterIncrement()
         {
-            for (int i = 0; i < 1000000000; i++)
+            for (int i = 0; i < 10000000; i++)
             {
                 //Count++;   //unsafe for Threads
 
