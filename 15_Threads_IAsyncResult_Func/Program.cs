@@ -28,10 +28,11 @@ namespace _15_Threads_IAsyncResult_Func
         {
             AsyncResult asyncResult = (AsyncResult)iAsyncResult; //as AsyncResult;
             Func<int, int, int> caller = (Func<int, int, int>)asyncResult.AsyncDelegate;
+            Console.WriteLine($"Async op is COMPLETED? -  {asyncResult.IsCompleted}");
             int acum = caller.EndInvoke(iAsyncResult);
 
-            Console.WriteLine($"Async op is COMPLETED? -  {asyncResult.IsCompleted}");
 
+            Console.WriteLine($"Async op is COMPLETED? -  {asyncResult.IsCompleted}");
             Console.WriteLine($"Callback. Result of async task: {iAsyncResult.AsyncState} {acum}");
             Console.WriteLine($"CallBack Thread ID {Thread.CurrentThread.ManagedThreadId}");
         }
