@@ -17,12 +17,11 @@ namespace _14_Threads_IAsyncResult_Func
             var callback = new AsyncCallback(HandleCompletion);
 
             //myDelegate.BeginInvoke(null, null);
-            //myDelegate.BeginInvoke(param1,param2,null, null);
+            //myDelegate.BeginInvoke(param1, ... , param16 ,null, null);
             //myDelegate.BeginInvoke(callback, null);
             //myDelegate.BeginInvoke(callback, 100500);
             var asyncResult = myDelegate.BeginInvoke(callback, 100500);
-            //string result = 
-            myDelegate?.EndInvoke(asyncResult);
+            string result = myDelegate?.EndInvoke(asyncResult);
             //Console.WriteLine(result);
 
 

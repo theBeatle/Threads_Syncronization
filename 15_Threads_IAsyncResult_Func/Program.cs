@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,7 +30,9 @@ namespace _15_Threads_IAsyncResult_Func
             Func<int, int, int> caller = (Func<int, int, int>)asyncResult.AsyncDelegate;
             int acum = caller.EndInvoke(iAsyncResult);
 
-            Console.WriteLine($"Callback. Result of async task: {iAsyncResult.AsyncState} = {acum}");
+            Console.WriteLine($"Async op is COMPLETED? -  {asyncResult.IsCompleted}");
+
+            Console.WriteLine($"Callback. Result of async task: {iAsyncResult.AsyncState} {acum}");
             Console.WriteLine($"CallBack Thread ID {Thread.CurrentThread.ManagedThreadId}");
         }
 
@@ -39,13 +42,13 @@ namespace _15_Threads_IAsyncResult_Func
             var myDelegate = new Func<int, int, int>(Acumulate);
             Console.WriteLine("Main Thread is working");
 
-            myDelegate.BeginInvoke(10, 20, CallBack, "Acumulated number =");
+            myDelegate.BeginInvoke(10, 20, CallBack, "Hi VLad! Acumulated number =");
 
             //string result = myDelegate?.EndInvoke(asyncResult); // get result
             //Console.WriteLine("Acumulated number is = " + result);
 
 
-            Thread.Sleep(1000);
+            Thread.Sleep(10000);
             Console.WriteLine("Main Thread is ended");
             Console.ReadKey();
         }
