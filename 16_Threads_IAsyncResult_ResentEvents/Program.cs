@@ -10,7 +10,8 @@ namespace _16_Threads_IAsyncResult_ResentEvents
     class Program
     {
         //static AutoResetEvent waitHandler = new AutoResetEvent(true); // signalable at the start
-        static AutoResetEvent[] pool = { new AutoResetEvent(false), new AutoResetEvent(false) };
+        static AutoResetEvent[] pool = 
+            { new AutoResetEvent(false), new AutoResetEvent(false) };
 
         static void Main(string[] args)
         {
@@ -44,11 +45,11 @@ namespace _16_Threads_IAsyncResult_ResentEvents
                 }
             }
 
+            //AutoResetEvent.WaitAll(pool);
             AutoResetEvent.WaitAll(pool);
-            // AutoResetEvent.WaitAny(pool);
             Console.WriteLine("Both threads are ended");
 
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
         static void Count2() //HardWork for Thread2

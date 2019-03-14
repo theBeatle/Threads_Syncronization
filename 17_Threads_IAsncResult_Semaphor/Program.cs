@@ -10,12 +10,12 @@ namespace _17_Threads_IAsncResult_Semaphor
     class Program
     {
         static Semaphore semaphore;
-        static readonly SemaphoreSlim slimS = new SemaphoreSlim(100);
+        //static readonly SemaphoreSlim slimS = new SemaphoreSlim(100);
 
         private static void Work(object number)
         {
-            // semaphore.WaitOne();
-            slimS.Wait();
+            semaphore.WaitOne();
+            //slimS.Wait();
 
             Console.WriteLine($"Critical section entered {number}");
             {
@@ -24,8 +24,8 @@ namespace _17_Threads_IAsncResult_Semaphor
                 Console.WriteLine($"Thread {number} UN-locked slot");
             }
             Console.WriteLine($"Critical section passed {number}");
-            slimS.Release();
-            //semaphore.Release();
+            //slimS.Release();
+            semaphore.Release();
         }
 
         public static void Main()
