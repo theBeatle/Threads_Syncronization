@@ -7,7 +7,7 @@ namespace _20_Threads_ThreadsPool
     class Program
     {
         public static int lengthZ = 10;
-        public static int innerIter = 100;
+        public static int innerIter = 1000;
         public static int counterCurrent = 0;
         public static int counterMax = lengthZ * innerIter;
         public static List<AutoResetEvent> events = new List<AutoResetEvent>();
@@ -58,10 +58,6 @@ namespace _20_Threads_ThreadsPool
                 //list.Add(new Thread(HardWork));
                 //list[i].Start();
             }
-            //for (int i = 0; i < lengthZ; i++)
-            //{
-            //    events[i].Set();
-            //}
             //Thread.Sleep(10000);
             //for (int i = 0; i < length; i++)
             //{
@@ -82,9 +78,6 @@ namespace _20_Threads_ThreadsPool
             public void HardWork()
             {
                 Console.WriteLine(index);
-                // events[eventIndex].Reset();
-                //events[index].WaitOne();
-
                 List<string> mlist = new List<string>();
                 for (int i = 0; i < innerIter; i++)
                 {
