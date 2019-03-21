@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20_Threads_ThreadsPool", "2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21_Processes_SysPro", "21_Processes_SysPro\21_Processes_SysPro.csproj", "{3632128E-5B3A-4B17-AC7A-3B97C2FE9761}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22_Tasks", "22_Tasks\22_Tasks.csproj", "{A3605899-1CDB-49C7-ACC5-A8834B51BBD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23_AsynAwait", "ConsoleApp1\23_AsynAwait.csproj", "{567027E7-D3DB-4C76-AE18-5EA7D6737DC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,14 @@ Global
 		{3632128E-5B3A-4B17-AC7A-3B97C2FE9761}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3632128E-5B3A-4B17-AC7A-3B97C2FE9761}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3632128E-5B3A-4B17-AC7A-3B97C2FE9761}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3605899-1CDB-49C7-ACC5-A8834B51BBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3605899-1CDB-49C7-ACC5-A8834B51BBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3605899-1CDB-49C7-ACC5-A8834B51BBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3605899-1CDB-49C7-ACC5-A8834B51BBD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{567027E7-D3DB-4C76-AE18-5EA7D6737DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{567027E7-D3DB-4C76-AE18-5EA7D6737DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{567027E7-D3DB-4C76-AE18-5EA7D6737DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{567027E7-D3DB-4C76-AE18-5EA7D6737DC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
